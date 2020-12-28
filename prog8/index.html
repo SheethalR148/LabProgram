@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form action="calculate.php" method="get">
+        <div style="padding: 20px">
+            <label for="first">First Operand: </label>
+            <input required pattern="[0-9]+.?[0-9]*" title="Only numbers are allowed" id="first" type="text" name="op1">
+        </div>
+        <div style="padding: 20px">
+            <label>Choose an operator: </label>
+            <input id="plus" type="radio" name="operator" value="+">
+            <label for="plus">Add(+)</label>
+            <input id="minus" type="radio" name="operator" value="-">
+            <label for="minus">Minus(-)</label>
+            <input required id="multiply" type="radio" name="operator" value="*">
+            <label for="multiply">Multiply(*)</label>
+            <input id="divide" type="radio" name="operator" value="/">
+            <label for="divide">Divide(/)</label>
+        </div>
+        <div style="padding: 20px">
+            <label for="second">Second Operand: </label>
+            <input required pattern="[0-9.]+" title="Only numbers are allowed" id="second" type="text" name="op2">
+        </div>
+        <div style="padding: 20px">
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>

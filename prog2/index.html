@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Program to find squares and cubes</h1>
+<script>
+    var lr=prompt("Enter lower range:")
+    var ur=prompt("Enter upper range:");
+    var con=confirm("Do you want to see the table?");
+    if(con)
+    {
+    var square=0;
+    var cube=0;
+    var myTable="<table border='1' width='20%' align='center'><tr><th>No.</th><th>Square</th><th>Cube</th></tr>"
+    for(var i=lr;i<=ur;i++)
+    {
+        square=i*i;
+        cube=i*i*i;
+        myTable+="<tr><td>"+i+"</td><td>"+square+"</td><td>"+cube+"</td></tr>"
+    }
+
+    myTable+="</table>"
+
+        document.write(myTable);
+    }
+    // var n=prompt("Enter the number");
+    // var val=0;
+    // var myTable="<table border='1' width='20%' align='center'><tr><th>No.</th><th>Value</th></tr>"
+    // for(var i=1;i<=10;i++)
+    // {
+    //     val=n*i;
+    //     myTable+="<tr><td>"+n+" * "+i+"</td><td>"+val+"</td></tr>"
+    //
+    // }
+    // myTable+="</table>"
+    // document.write(myTable);
+</script>
+
+<!--    <table border="1" width="40%" align="center" >-->
+<!--        <tr>-->
+<!--            <th>Person</th>-->
+<!--            <th>Age</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Paul</td>-->
+<!--            <td>23</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Dennis</td>-->
+<!--            <td>43</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Chris</td>-->
+<!--            <td>66</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Tom</td>-->
+<!--            <td>21</td>-->
+<!--        </tr>-->
+
+<!--    </table>-->
+<!--    <br>-->
+<!--    <table border="1" width="40%" align="center">-->
+<!--        <tr>-->
+<!--            <td>Column1</td>-->
+<!--            <td>Column2</td>-->
+<!--            <td>Column3</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td rowspan="2">Row1 Cell1</td>-->
+<!--            <td>Row1 Cell2</td>-->
+<!--            <td>Row1 Cell3</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Row2 Cell2</td>-->
+<!--            <td>Row2 Cell3</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td colspan="3">Row3 Cell1</td>-->
+<!--        </tr>-->
+<!--    </table>-->
+</body>
+</html>

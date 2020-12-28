@@ -1,0 +1,19 @@
+h1 {
+    color: green;
+    font-size: 30px
+}
+h2 {
+    display: block;
+    color: crimson;
+    font-size: 20px;
+    margin-left: 10px
+}
+label {
+    display: block;
+    color: blue;
+    margin-left: 25px;
+    line-height: 25px;
+}
+USN,Name,College,Branch,Year,Email {
+    color: orangered
+}

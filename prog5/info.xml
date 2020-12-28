@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="prog5.css"?>
+<!DOCTYPE student_info [
+        <!ELEMENT student_info (h1,h2+,label+)>
+        <!ELEMENT h1 (#PCDATA)>
+        <!ELEMENT h2 (#PCDATA)>
+        <!ELEMENT label (#PCDATA|USN|Name|College|Branch|Year|Email)*>
+        <!ELEMENT USN (#PCDATA)>
+        <!ELEMENT Name (#PCDATA)>
+        <!ELEMENT College (#PCDATA)>
+        <!ELEMENT Branch (#PCDATA)>
+        <!ELEMENT Year (#PCDATA)>
+        <!ELEMENT Email (#PCDATA)>
+
+        ]>
+<student_info>
+        <h1>Student Information</h1>
+        <h2>Student 1 information:</h2>
+            <label>USN :<USN>4SO17CS100</USN></label>
+            <label>Name :<Name>Sheethal R</Name></label>
+            <label>College :<College>SJEC</College></label>
+            <label>Branch :<Branch>CSE</Branch></label>
+            <label>Year :<Year>2017</Year></label>
+            <label>Email :<Email>sheethalr148@gmail.com</Email></label>
+        <h2>Student 2 information:</h2>
+            <label>USN :<USN>4SO17CS100</USN></label>
+            <label>Name :<Name>Sheethal R</Name></label>
+            <label>College :<College>SJEC</College></label>
+            <label>Branch :<Branch>CSE</Branch></label>
+            <label>Year :<Year>2017</Year></label>
+            <label>Email :<Email>sheethalr148@gmail.com</Email></label>
+        <h2>Student 3 information:</h2>
+            <label>USN :<USN>4SO17CS100</USN></label>
+            <label>Name :<Name>Sheethal R</Name></label>
+            <label>College<College>SJEC</College></label>
+            <label>Branch :<Branch>CSE</Branch></label>
+            <label>Year :<Year>2017</Year></label>
+            <label>Email :<Email>sheethalr148@gmail.com</Email></label>
+</student_info>

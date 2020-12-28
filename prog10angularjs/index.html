@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+        var app=angular.module('myApp',[]);
+        app.controller('myContr',function ($scope,$http)
+        {
+            $http.get("getDetails.php").then(function (response)
+            {
+                $scope.details=response.data;
+            })
+
+        });
+    </script>
+    <style>
+        h1,form {text-align: center}
+    </style>
+</head>
+<body ng-controller="myContr">
+<h1>Selection Sort on sample student data</h1>
+<h1>
+    Sort By :
+    <select required name="field" ng-model="field">
+        <option value="" disabled selected>Choose Field</option>
+        <option value="name">Name</option>
+        <option value="usn">USN</option>
+        <option value="year">Year</option>
+        <option value="marks">Marks</option>
+        <option value="college">College</option>
+    </select>
+</h1>
+<table border="1" width="80%" align="center">
+    <tr>
+        <th colspan="6">Student Details [Sorted by: {{field}}]</th>
+    </tr>
+    <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>USN</th>
+        <th>Year</th>
+        <th>Marks</th>
+        <th>College</th>
+    </tr>
+    <tr ng-repeat="d in details|orderBy:field:false">
+        <td>{{$index+1}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.usn}}</td>
+        <td>{{d.year}}</td>
+        <td>{{d.marks}}</td>
+        <td>{{d.college}}</td>
+    </tr>
+</table>
+</body>
+</html>

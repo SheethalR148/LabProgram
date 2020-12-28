@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        var fs=5;
+        function textAnimate() {
+                // document.getElementById('text').style.position="fixed";
+                // document.getElementById('text').style.top=fs+"pt";
+                var timer=setInterval(animate,100);
+                var state="growing";
+                function animate() {
+                    // document.getElementById('text').style.position="fixed";
+                    if(state=="growing")
+                    {
+                        fs+=5;
+                        document.getElementById('text').innerText="TEXT GROWING";
+                        document.getElementById('text').style.color="red";
+                        document.getElementById('text').style.fontSize=fs+'pt';
+                        // document.getElementById('text').style.left=fs+"vw";
+                    }
+                    if(state=="shrinking")
+                    {
+                        fs-=5;
+                        document.getElementById('text').innerText="TEXT SHRINKING";
+                        document.getElementById('text').style.color="blue";
+                        document.getElementById('text').style.fontSize=fs+'pt';
+                        // document.getElementById('text').style.left=fs+"vw";
+                    }
+                    if(fs==50){
+                        state="shrinking";
+                    }
+                    if(fs==5){
+                        clearInterval(timer);
+                    }
+                    }
+        }
+    </script>
+
+</head>
+<body onload="textAnimate()">
+    <h1>Program to Increase/Decrease Size of Text</h1>
+    <p id="text">TEXT GROWING</p>
+<!--    <button  onclick="textAnimate()" >Animate</button>-->
+</body>
+</html>
